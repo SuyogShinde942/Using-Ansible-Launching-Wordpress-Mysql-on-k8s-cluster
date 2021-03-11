@@ -1,1 +1,2 @@
-# Using-Ansible-Launching-Wordpress-Mysql-on-k8s-cluster
+# Using-Ansible-Launching-Wordpress-Mysql-application-on-k8s-cluster
+# So in this article i am going to launch a wordpress and appllication on a kubernetes cluster and automate this whole process using ANSIBLE.We are also going to use the dynamic inventory over here.
