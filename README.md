@@ -25,9 +25,11 @@ MySQL Database Service is a fully managed database service to deploy cloud-nativ
 Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS resources in a logically isolated virtual network that you define. ... You can use both IPv4 and IPv6 for most resources in your virtual private cloud, helping to ensure secure and easy access to resources and applications.
 
 ### We are going to create the role for it
+
 \![](Images/vpc1.png)
 
 ### After Creating roles in aws_vpc/vars/main.yml
+
 \![](Images/AWS/vpc/1.png)
 
 
