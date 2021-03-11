@@ -1,0 +1,16 @@
+- hosts: "tag_Name_k8s_master"
+  roles:
+  - role: "k8s-cluster"
+  
+- hosts: "tag_Name_k8s_slave"
+  vars_prompt:
+  - name: "master_token"
+    prompt: "Enter Token To Join To Master: "
+    private: no
+  roles:
+  - role: "k8s-slave"
+
+- hosts: "tag_Name_k8s_master"
+  roles:
+  - name: "Launching WORDPRESS AND MYSQL"
+    role: "/root/ansible/task19/mysql-wordpress"

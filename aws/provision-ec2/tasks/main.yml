@@ -1,0 +1,32 @@
+---
+# tasks file for provision-ec2
+- name: "Launching a ec2 instance (master)" 
+  amazon.aws.ec2:
+    key_name: "{{ keypair }}"
+    region: "{{ region }}"
+    instance_type: "{{ instance_type }}"
+    image: "{{ image }}"
+    wait: yes
+    group_id: "{{ security_group_results.group_id }}"
+    count: 1
+    vpc_subnet_id: "{{ subnet_result.subnet.id }}"
+    assign_public_ip: yes
+    instance_tags:
+            Name: k8s_master
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+- name: "Launching two ec2 instance (slave)"
+  amazon.aws.ec2:
+    key_name: "{{ keypair }}"
+    region: "{{ region }}"
+    instance_type: "{{ instance_type }}"
+    image: "{{ image }}"
+    wait: yes
+    group_id: "{{ security_group_results.group_id }}"
+    vpc_subnet_id: "{{ subnet_result.subnet.id }}"
+    count: 2
+    instance_tags:
+            Name: k8s_slave
+    aws_access_key: "{{ aws_access_key }}"
+    aws_secret_key: "{{ aws_secret_key }}"
+
