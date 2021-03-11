@@ -21,8 +21,9 @@ MySQL Database Service is a fully managed database service to deploy cloud-nativ
 ## Why dynamic inventory?
 #### For example, Aws default provides a dynamic IP so, after every restart, it's assigned to a new IP, or we launch a new O.S in a region called ap-south-1 and we need to use all the container as the database from that region and suppose there are 100 servers, Instead of putting it manually in the inventory there is a python script that works as a dynamic inventory which divides the instances with tags, region, subnets, etc.
 
-# __First, let's start with provisioning of Ec-2 instances with ansible__
-### Creating an Ansible role called provision-ec2
+## First we have to create a Virtual Private Network in AWS for the instances we launch
+### We are going to create the role for it
 
 
-![Screenshot (311)](https://user-images.githubusercontent.com/64534620/107312833-2ec74b80-6a46-11eb-83c9-ec1f705aa10e.png)
+
+
