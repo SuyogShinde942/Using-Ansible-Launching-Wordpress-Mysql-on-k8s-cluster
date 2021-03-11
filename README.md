@@ -24,7 +24,7 @@ MySQL Database Service is a fully managed database service to deploy cloud-nativ
 ## First we have to create a Virtual Private Network in AWS for the instances we launch
 ### We are going to create the role for it
 
-![](images/vpc1.png)
+![](Images/vpc1.png)
 
 
 
