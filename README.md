@@ -176,7 +176,7 @@ To install boto module
 ![word](https://user-images.githubusercontent.com/64534620/110790537-ff168980-8225-11eb-9a3f-d3ed9463d701.png)
 
 
-# Successfully completed the project of launching a wordpress and sql application on a kubernetes cluster and automating this whole process using ANSIBLE on AWS CLOUD (Provisioning)
+# ⭐⭐Successfully completed the project of launching a wordpress and sql application on a kubernetes cluster and automating this whole process using ANSIBLE on AWS CLOUD (Provisioning)⭐⭐
 
 ![thank-you-hand-drawn-lettering-260nw-780491263](https://user-images.githubusercontent.com/64534620/110791291-e5c20d00-8226-11eb-8ab5-2aa06425d0a7.jpg)
 # HAPPY LEARNING ⭐⭐⭐
