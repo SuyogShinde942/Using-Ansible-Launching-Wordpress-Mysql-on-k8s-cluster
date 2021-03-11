@@ -38,14 +38,13 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 ![](Images/vpc1.png)
 
 ### Writting the variables in aws_vpc/vars/main.yml
-
 ![](Images/AWS/vpc/1.png)
 
 ### Writting all the task in aws_vpc/tasks/main.yml
 ![](Images/AWS/vpc/main.png)
 ### VPC Created :
 ![](Images/AWS/vpc/Screenshot%20(362).png)
-###Subenet Created :
+### Subenet Created :
 ![](Images/AWS/vpc/subnets.png)
 ### Security Groups Created :
 ![](Images/AWS/vpc/sg.png)
@@ -70,6 +69,34 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 
 ![](Images/AWS/ec2.png)
 ## As you can see above we have successfully launced and provisioned the ec2-instances
+
+## Now let's move to the dynamic inventory part
+The dynamic inventory will separate the instances according to region, tags, public and private IPs, and many more
+
+## We used two scripts for the dynamic inventory ec2.py and ec2.ini
+
+https://raw.githubusercontent.com/ansible/ansible/stable-1.9/plugins/inventory/ec2.py  ---- ec2.py
+https://raw.githubusercontent.com/ansible/ansible/stable-1.9/plugins/inventory/ec2.ini ---- ec2.ini
+
+## Pre-requisites for these scripts are installing boto and boto3 in the system where you are running the program.
+To install boto module
+> pip3 install boto
+
+> pip3 install boto3
+
+## __To successfully make an API call to AWS, you will need to configure Boto (the Python interface to AWS). There are a variety of methods available, but the simplest is just to export two environment variables:__
+
+>export AWS_ACCESS_KEY_ID='your access key'
+
+>export AWS_SECRET_ACCESS_KEY='your secret key'
+
+## or The second option is to copy the script to /etc/ansible/hosts and chmod +x it. You will also need to copy the ec2.ini file to /etc/ansible/ec2.ini. Then you can run ansible as you would normally.
+
+![6](https://user-images.githubusercontent.com/64534620/107314539-aba7f480-6a49-11eb-8c57-54b3450b1b47.png)
+## We have to only run ec2.py for getting the dynamic inventory.
+## __The script separated the instances according to tags "tag_db_k8s_master" and "tag_db_k8s_slave" and made them a separated host group so we can use them in the playbook.__
+## __Instead of providing the aws_access_key and aws_secret_key in the playbook, we can configure the AWS CLI and the Ansible will by default use the credentials which we provide while configuring the AWS CLI.__
+# Our dynamic inventory is ready to use.
 
 
 
