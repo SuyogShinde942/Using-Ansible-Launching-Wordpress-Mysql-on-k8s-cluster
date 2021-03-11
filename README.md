@@ -166,7 +166,7 @@ To install boto module
 ## After this we can connect to the wordpress application by using  IP of the master or any slave with port assigned to it.
 ### The mysql-wordpress playbook is written in such a way that it will show the IP and Ports while running
 ### For example
-![](Images/wordpress@20and@20mysql/Screenshot%20(347).png)
+![](Images/wordpress%20and%20mysql/Screenshot%20(347).png)
 
 ## Now,lets take the IP of any node and use it with the above port
-![](Images/wordpress@20and@20mysql/imgonline-com-ua-twotoone-orlPqxJpdzKkNX9T.jpg)
+![](Images/wordpress%20and%20mysql/imgonline-com-ua-twotoone-orlPqxJpdzKkNX9T.jpg)
