@@ -28,9 +28,12 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 
 ![](Images/vpc1.png)
 
-### After Creating roles in aws_vpc/vars/main.yml
+### Writting the variables in aws_vpc/vars/main.yml
 
 ![](Images/AWS/vpc/1.png)
+
+### Writting all the task in aws_vpc/tasks/main.yml
+![](Images/AWS/vpc/main.png)
 
 
 
