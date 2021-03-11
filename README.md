@@ -73,30 +73,88 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 ## Now let's move to the dynamic inventory part
 The dynamic inventory will separate the instances according to region, tags, public and private IPs, and many more
 
-## We used two scripts for the dynamic inventory ec2.py and ec2.ini
+### We used two scripts for the dynamic inventory ec2.py and ec2.ini
 
 https://raw.githubusercontent.com/ansible/ansible/stable-1.9/plugins/inventory/ec2.py  ---- ec2.py
 https://raw.githubusercontent.com/ansible/ansible/stable-1.9/plugins/inventory/ec2.ini ---- ec2.ini
 
-## Pre-requisites for these scripts are installing boto and boto3 in the system where you are running the program.
+### Pre-requisites for these scripts are installing boto and boto3 in the system where you are running the program.
 To install boto module
 > pip3 install boto
 
 > pip3 install boto3
 
-## __To successfully make an API call to AWS, you will need to configure Boto (the Python interface to AWS). There are a variety of methods available, but the simplest is just to export two environment variables:__
+### __To successfully make an API call to AWS, you will need to configure Boto (the Python interface to AWS). There are a variety of methods available, but the simplest is just to export two environment variables:__
 
 >export AWS_ACCESS_KEY_ID='your access key'
 
 >export AWS_SECRET_ACCESS_KEY='your secret key'
 
-## or The second option is to copy the script to /etc/ansible/hosts and chmod +x it. You will also need to copy the ec2.ini file to /etc/ansible/ec2.ini. Then you can run ansible as you would normally.
+### or The second option is to copy the script to /etc/ansible/hosts and chmod +x it. You will also need to copy the ec2.ini file to /etc/ansible/ec2.ini. Then you can run ansible as you would normally.
 
 ![6](https://user-images.githubusercontent.com/64534620/107314539-aba7f480-6a49-11eb-8c57-54b3450b1b47.png)
-## We have to only run ec2.py for getting the dynamic inventory.
-## __The script separated the instances according to tags "tag_db_k8s_master" and "tag_db_k8s_slave" and made them a separated host group so we can use them in the playbook.__
-## __Instead of providing the aws_access_key and aws_secret_key in the playbook, we can configure the AWS CLI and the Ansible will by default use the credentials which we provide while configuring the AWS CLI.__
-# Our dynamic inventory is ready to use.
+### We have to only run ec2.py for getting the dynamic inventory.
+### __The script separated the instances according to tags "tag_db_k8s_master" and "tag_db_k8s_slave" and made them a separated host group so we can use them in the playbook.__
+### __Instead of providing the aws_access_key and aws_secret_key in the playbook, we can configure the AWS CLI and the Ansible will by default use the credentials which we provide while configuring the AWS CLI.__
+### Our dynamic inventory is ready to use.
+
+## Now let's Create the role for kubernetes Cluster(Master)
+
+> ansible-galaxy init k8s-cluster
+
+### In the k8s-cluster/vars/main.yml file
+
+![](Images/K8s cluster/Master/var.png)
+
+## Steps in the below playbook /k8s-cluster/tasks/main.yml
+
+1. Installing docker and iproute-tc
+2. Configuring the Yum repo for kubernetes
+3. Installing kubeadm,kubelet kubectl program
+4. Enabling the docker and Kubernetes
+5. Pulling the config images
+6. Confuring the docker daemon.json file
+7. Restarting the docker service
+8. Configuring the Ip tables and refreshing sysctl
+9. Starting kubeadm service
+10. Creating .kube Directory
+11. Copying file config file
+12. Installing Addons e.g flannel
+13. Creating the token
+
+![](Images/K8s cluster/Master/taskmain.png)
+
+### In /k8s-slave/vars/main.yml
+
+![](Images/K8s cluster/Master/var.png)
+
+## Steps in the below playbook /k8s-slave/task/main.yml
+
+1. Installing docker and iproute-tc
+2. Configuring the Yum repo for kubernetes
+3. Installing kubeadm,kubelet kubectl program
+4. Enabling the docker and kubenetes
+5. Pulling the config images
+6. Confuring the docker daemon.json file
+7. Restarting the docker service
+8. Configuring the Ip tables and refreshing sysctl
+9. Connecting to Master
+
+![](Images/K8s cluster/Slave/carbon.png)
+
+# ⭐⭐ Cluster is created successfully ⭐⭐
+
+## Now, Launching a Wordpress and mysql applications in the above cluster
+### Creating a role to launch the applications
+
+>  ansible-galaxy init mysql-wordpress
+
+## Steps in the below playbook
+1. Launching wordpress application
+2. Launching mysql application
+3. Exposing the wordpress application
+
+![](Images/wordpress%20and%20mysql/taskmain.png)
 
 
 
@@ -104,3 +162,11 @@ To install boto module
 
 
 
+
+
+
+
+
+
+### Let's Create a playbook to run both the roles K8s-cluster(Master) and K8s(Slave) 
+![](Images/K8s cluster/main.png)
