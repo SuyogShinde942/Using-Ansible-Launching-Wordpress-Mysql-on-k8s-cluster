@@ -26,11 +26,11 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 
 ### We are going to create the role for it
 
-\![](Images/vpc1.png)
+![](Images/vpc1.png)
 
 ### After Creating roles in aws_vpc/vars/main.yml
 
-\![](Images/AWS/vpc/1.png)
+![](Images/AWS/vpc/1.png)
 
 
 
