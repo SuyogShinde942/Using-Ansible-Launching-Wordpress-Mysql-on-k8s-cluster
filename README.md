@@ -42,6 +42,12 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 
 ### Writting all the task in aws_vpc/tasks/main.yml
 ![](Images/AWS/vpc/main.png)
+### VPC Created
+![](Images/AWS/vpc/Screenshot%20(362).png)
+###Subenet Created
+![](Images/AWS/vpc/subnets.png)
+### Security Groups Created
+![](Images/AWS/vpc/sg.png)
 
 ## Now let's move to provision the ec2 instances
 
