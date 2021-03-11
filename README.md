@@ -124,6 +124,8 @@ To install boto module
 
 ![](Images/K8s%20cluster/Master/taskmain.png)
 
+## Now let's Create the role for kubernetes Cluster(Slave)
+> ansible-galaxy init k8s-slave
 ### In /k8s-slave/vars/main.yml
 
 ![](Images/K8s%20cluster/Master/var.png)
