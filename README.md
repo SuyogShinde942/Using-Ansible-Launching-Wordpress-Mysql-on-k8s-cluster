@@ -33,6 +33,7 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 
 ### We are going to create the role for it
 
+> ansible-galaxy init aws_vpc
 ![](Images/vpc1.png)
 
 ### Writting the variables in aws_vpc/vars/main.yml
@@ -41,6 +42,15 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 
 ### Writting all the task in aws_vpc/tasks/main.yml
 ![](Images/AWS/vpc/main.png)
+
+## Now let's move to provision the ec2 instances
+
+### Creatining role
+> ansible-galaxy init provision-ec2
+
+### Writting the varaibles in provision-ec2/vars/main.yml
+
+![](Images/AWS/aws%20provisson/carbon.png)
 
 
 
