@@ -22,9 +22,15 @@ MySQL Database Service is a fully managed database service to deploy cloud-nativ
 #### For example, Aws default provides a dynamic IP so, after every restart, it's assigned to a new IP, or we launch a new O.S in a region called ap-south-1 and we need to use all the container as the database from that region and suppose there are 100 servers, Instead of putting it manually in the inventory there is a python script that works as a dynamic inventory which divides the instances with tags, region, subnets, etc.
 
 ## First we have to create a Virtual Private Network in AWS for the instances we launch
-### We are going to create the role for it
+Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS resources in a logically isolated virtual network that you define. ... You can use both IPv4 and IPv6 for most resources in your virtual private cloud, helping to ensure secure and easy access to resources and applications.
 
-![](Images/vpc1.png)
+### We are going to create the role for it
+\![](Images/vpc1.png)
+
+### After Creating roles in aws_vpc/vars/main.yml
+\![](Images/AWS/vpc/1.png)
+
+
 
 
 
