@@ -169,4 +169,4 @@ To install boto module
 ![](Images/wordpress@20and@20mysql/Screenshot%20(347).png)
 
 ## Now,lets take the IP of any node and use it with the above port
-![](Images/wordpress%20and%20mysql/)
+![](Images/wordpress@20and@20mysql/imgonline-com-ua-twotoone-orlPqxJpdzKkNX9T.jpg)
