@@ -104,7 +104,7 @@ To install boto module
 
 ### In the k8s-cluster/vars/main.yml file
 
-![](Images/K8s cluster/Master/var.png)
+![](Images/K8s%20cluster/Master/var.png)
 
 ## Steps in the below playbook /k8s-cluster/tasks/main.yml
 
@@ -122,11 +122,11 @@ To install boto module
 12. Installing Addons e.g flannel
 13. Creating the token
 
-![](Images/K8s cluster/Master/taskmain.png)
+![](Images/K8s%20cluster/Master/taskmain.png)
 
 ### In /k8s-slave/vars/main.yml
 
-![](Images/K8s cluster/Master/var.png)
+![](Images/K8s%20cluster/Master/var.png)
 
 ## Steps in the below playbook /k8s-slave/task/main.yml
 
@@ -140,7 +140,7 @@ To install boto module
 8. Configuring the Ip tables and refreshing sysctl
 9. Connecting to Master
 
-![](Images/K8s cluster/Slave/carbon.png)
+![](Images/K8s%20cluster/Slave/carbon.png)
 
 # ⭐⭐ Cluster is created successfully ⭐⭐
 
