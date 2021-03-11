@@ -34,6 +34,7 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 ### We are going to create the role for it
 
 > ansible-galaxy init aws_vpc
+
 ![](Images/vpc1.png)
 
 ### Writting the variables in aws_vpc/vars/main.yml
@@ -42,14 +43,15 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 
 ### Writting all the task in aws_vpc/tasks/main.yml
 ![](Images/AWS/vpc/main.png)
-### VPC Created
+### VPC Created :
 ![](Images/AWS/vpc/Screenshot%20(362).png)
-###Subenet Created
+###Subenet Created :
 ![](Images/AWS/vpc/subnets.png)
-### Security Groups Created
+### Security Groups Created :
 ![](Images/AWS/vpc/sg.png)
 
-## Now let's move to provision the ec2 instances
+## Now let's move to provision the ec2 instances and launch them in the above created VPC
+### We are going  to launch one MASTER and TWO slaves for k8s cluster
 
 ### Creatining role
 > ansible-galaxy init provision-ec2
@@ -57,6 +59,19 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 ### Writting the varaibles in provision-ec2/vars/main.yml
 
 ![](Images/AWS/aws%20provisson/carbon.png)
+
+###  Writting all the task in provision-ec2/tasks/main.yml
+
+![](Images/AWS/aws%30provisson/taskmain.png)
+
+## After this writting a playbook to run both the roles aws_vpc and provision-ec2
+
+![](Images/AWS/mainrun.png)
+
+![](Images/AWS/ec2.png)
+## As you can see above we have successfully launced and provisioned the ec2-instances
+
+
 
 
 
