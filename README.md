@@ -158,17 +158,15 @@ To install boto module
 
 ![](Images/wordpress%20and%20mysql/taskmain.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### Let's Create a playbook to run both the roles K8s-cluster(Master) and K8s(Slave) 
-![](Images/K8s cluster/main.png)
+![](Images/K8s%20cluster/main.png)
+
+## Both the cluster and the applications are launced successfully
+
+## After this we can connect to the wordpress application by using  IP of the master or any slave with port assigned to it.
+### The mysql-wordpress playbook is written in such a way that it will show the IP and Ports while running
+### For example
+![](Images/wordpress@20and@20mysql/Screenshot (347).png)
+
+## Now,lets take the IP of any node and use it with the above port
+![](Images/wordpress%20and%20mysql/)
