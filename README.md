@@ -1,5 +1,6 @@
-# Using-Ansible-Launching-Wordpress-Mysql-application-on-k8s-cluster
-## So in this article i am going to launch a wordpress and application on a kubernetes cluster and automate this whole process using ANSIBLE.
+# Using-Ansible-Launching-Wordpress-Mysql-application-on-k8s-cluster-AWSCLOUD(Provisioning
+)
+## So in this article i am going to launch a wordpress and sql application on a kubernetes cluster and automating this whole process using ANSIBLE on AWS CLOUD (Provisioning)
 ## We are also going to use the dynamic inventory over here.
 
 ## Amazon Web Service :
@@ -170,3 +171,12 @@ To install boto module
 
 ## Now,lets take the IP of any node and use it with the above port
 ![](Images/wordpress%20and%20mysql/imgonline-com-ua-twotoone-orlPqxJpdzKkNX9T.jpg)
+
+## Clients are ready to connect my wordpress website
+![word](https://user-images.githubusercontent.com/64534620/110790537-ff168980-8225-11eb-9a3f-d3ed9463d701.png)
+
+
+# Successfully completed the project of launching a wordpress and sql application on a kubernetes cluster and automating this whole process using ANSIBLE on AWS CLOUD (Provisioning)
+
+![thank-you-hand-drawn-lettering-260nw-780491263](https://user-images.githubusercontent.com/64534620/110791291-e5c20d00-8226-11eb-8ab5-2aa06425d0a7.jpg)
+# HAPPY LEARNING ⭐⭐⭐
