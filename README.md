@@ -45,7 +45,7 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 ![](Images/AWS/vpc/main.png)
 ### VPC Created :
 ![](Images/AWS/vpc/Screenshot%20(362).png)
-### Subenet Created :
+### Subnet Created :
 ![](Images/AWS/vpc/subnets.png)
 ### Security Groups Created :
 ![](Images/AWS/vpc/sg.png)
