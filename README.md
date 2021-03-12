@@ -69,7 +69,7 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 ![](Images/AWS/mainrun.png)
 
 ![](Images/AWS/ec2.png)
-## As you can see above we have successfully launced and provisioned the ec2-instances
+## As you can see above we have successfully launched and provisioned the ec2-instances
 
 ## Now let's move to the dynamic inventory part
 The dynamic inventory will separate the instances according to region, tags, public and private IPs, and many more
