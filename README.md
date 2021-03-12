@@ -53,7 +53,7 @@ Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS 
 ## Now let's move to provision the ec2 instances and launch them in the above created VPC
 ### We are going  to launch one MASTER and TWO slaves for k8s cluster
 
-### Creatining role
+### Creating role
 > ansible-galaxy init provision-ec2
 
 ### Writting the varaibles in provision-ec2/vars/main.yml
